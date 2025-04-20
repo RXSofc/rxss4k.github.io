@@ -1,111 +1,138 @@
 <!DOCTYPE html><html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profil Bisnis</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #f2f2f2;
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: start;
-            height: 100vh;
-        }.container {
-        text-align: center;
-        margin-top: 100px;
-        cursor: pointer;
-    }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EVILVOID TEAM</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      height: 100vh;
+      background: url('https://od.lk/s/OV8yNTAyNjE1OThf/Proyek%20Baru%2031%20%5BD5FEDC0%5D.png') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }.glass-container {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 40px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
 
-    h1 {
-        font-size: 36px;
-        color: #333;
-        margin-bottom: 20px;
-        transition: transform 2s ease;
-    }
+h1 {
+  font-size: 32px;
+  color: #fff;
+  margin-bottom: 20px;
+}
 
-    .logo {
-        width: 150px;
-        height: 150px;
-        object-fit: contain;
-        border-radius: 50%;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-        transition: transform 2s ease;
-    }
+.logo {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #;
+  margin-bottom: 30px;
+}
 
-    .zoom-out {
-        transform: scale(0.1);
-    }
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
 
-    #troll-text {
-        font-size: 32px;
-        margin-top: 30px;
-        display: none;
-        font-weight: bold;
-        animation: zoomColor 0.4s infinite;
-    }
+.social-links a {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  padding: 12px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  outline: none;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(200, 0, 0, 0.3);
+}
 
-    @keyframes zoomColor {
-        0% {
-            transform: scale(1);
-            color: red;
-        }
-        25% {
-            transform: scale(1.2);
-            color: blue;
-        }
-        50% {
-            transform: scale(1);
-            color: lime;
-        }
-        75% {
-            transform: scale(1.2);
-            color: orange;
-        }
-        100% {
-            transform: scale(1);
-            color: red;
-        }
-    }
-</style>
+.social-links a:hover {
+  background-color: rgba(200, 0, 0, 0.3);
+}
 
+#troll-text {
+  font-size: 28px;
+  color: #fff;
+  margin-top: 30px;
+  display: none;
+  font-weight: bold;
+  animation: zoomColor 0.4s infinite;
+}
+
+@keyframes zoomColor {
+  0% {
+    transform: scale(1);
+    color: red;
+  }
+  25% {
+    transform: scale(1.2);
+    color: blue;
+  }
+  50% {
+    transform: scale(1);
+    color: lime;
+  }
+  75% {
+    transform: scale(1.2);
+    color: orange;
+  }
+  100% {
+    transform: scale(1);
+    color: red;
+  }
+}
+
+  </style>
 </head>
 <body>
-    <div class="container" onclick="playAudio()">
-        <h1 id="judul">Klik gambar profil untuk menampilkan Profil Bisnis Kami</h1>
-        <img id="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/User-avatar.svg/1200px-User-avatar.svg.png" alt="Logo Profil" class="logo">
-        <div id="troll-text"></div>
-        <audio id="audio" preload="auto" loop>
-            <source src="https://od.lk/s/OV8yNDgzMzg4MDBf/Prank%20sound%20desah%20halal.mp3" type="audio/mpeg">
-            Lagu tidak didukung browser.
-        </audio>
-    </div><script>
-    function playAudio() {
-        const audio = document.getElementById("audio");
-        const judul = document.getElementById("judul");
-        const logo = document.getElementById("logo");
-        const trollText = document.getElementById("troll-text");
+  <div class="glass-container">
+    <h1>interested? contact me below</h1>
+    <img class="logo" src="https://od.lk/s/OV8yNTAyNjExODBf/20231116_074611.png" alt="Logo" /><div class="social-links">
+  <a href="#" onclick="triggerPrank(event)">Instagram</a>
+  <a href="#" onclick="triggerPrank(event)">Facebook</a>
+  <a href="#" onclick="triggerPrank(event)">WhatsApp</a>
+  <a href="#" onclick="triggerPrank(event)">GitHub</a>
+</div>
 
-        audio.play();
-        judul.classList.add("zoom-out");
-        logo.classList.add("zoom-out");
-        trollText.style.display = "block";
+<div id="troll-text"></div>
 
-        // Cegah jeda atau stop
-        document.body.addEventListener("keydown", e => e.preventDefault());
-        document.body.addEventListener("contextmenu", e => e.preventDefault());
-        document.body.addEventListener("visibilitychange", () => {
-            if (document.hidden) document.location.reload();
-        });
+<audio id="audio" preload="auto" loop>
+  <source src="https://od.lk/s/OV8yNDgzMzg4MDBf/Prank%20sound%20desah%20halal.mp3" type="audio/mpeg" />
+</audio>
 
-        // Cegah pause
-        audio.onpause = () => audio.play();
-        audio.onended = () => audio.play();
+  </div>  <script>
+    function triggerPrank(e) {
+      e.preventDefault();
+      const audio = document.getElementById("audio");
+      const trollText = document.getElementById("troll-text");
+
+      audio.play();
+      trollText.style.display = "block";
+
+      // Cegah jeda atau stop
+      document.body.addEventListener("keydown", e => e.preventDefault());
+      document.body.addEventListener("contextmenu", e => e.preventDefault());
+      document.body.addEventListener("visibilitychange", () => {
+        if (document.hidden) document.location.reload();
+      });
+
+      audio.onpause = () => audio.play();
+      audio.onended = () => audio.play();
     }
-</script>
-
-</body>
+  </script></body>
 </html>
